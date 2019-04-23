@@ -34,23 +34,21 @@ public class Main {
 
        for(int i =0; i < 10; i++) {
            num[i] = input.nextDouble();
+
+           for (int k = 0; k < 10; k++) {
+               if (i == k) {
+                   continue;
+               } else if (num[i] == num[k]) {
+                   num[i] = num[k]=0;
+               }
+           }
+       }
+       for(double numbers:num) {
+           if (numbers != 0) {
+               System.out.println(numbers);
+           }
        }
 
-       for(int j =0; j <10; j++){
-           for(int k =0; k<10 ;k++){
-               if(j == k){
-                   continue;
-               }
-               else if(num[j]== num[k]){
-                   continue;
-               }
-               else{
-                   num[j]
-               }
-           }
-
-               System.out.println(num[j] + " ");
-           }
        }
     }
 
